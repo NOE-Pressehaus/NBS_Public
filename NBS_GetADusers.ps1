@@ -20,7 +20,8 @@ $excludedUsers = @(
 # Create an empty array to store the user objects
 $users = @()
 
-# Function to set the institution field from the upn, so if it upn end with @company.at the Inistution is Company, if it would end with nbs.at it Would be NBS. The value you want to set needs to be in the {}
+# Function to set the institution field from the upn, so if it upn end with @company.at the institution is Company, if it would end with nbs.at it Would be NBS.
+# The value you want to set needs to be in the {}
 function Get-UserObject {
     param($user, $groupMembership)
 
@@ -96,7 +97,7 @@ Rename-Item -Path $newCsvPath -NewName "nbsenabled_$currentDate.csv"
 $emailFrom = "from@sender.com"
 $emailTo = "to@recipient.com"
 $emailSubject = "NBS Benutzerliste - NBS $currentDate"
-$emailBody = "Hallo Test, hier die Automatisierte Benutzerliste für das Pressehaus vom $currentDate. Bitte einpfelgen und um kurze Rückmeldung. Danke!"
+$emailBody = "Hallo Test, hier die Automatisierte Benutzerliste für das Unternehmen vom $currentDate. Bitte einpfelgen und um kurze Rückmeldung. Danke!"
 $smtpServer = "mailrelay.test.com"
 
 # Paths to the CSV files

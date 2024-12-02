@@ -2,7 +2,7 @@
 Import-Module ActiveDirectory
 
 # Directory for the files where they are saved at
-$newDirPath = "\\share\share\NBS"
+$newDirPath = "\\server.domain.local\share\NBS"
 
 # Groupnames where our licensed Users are a member of, you can also use Get-Aduser -Filer * to get all Users.
 $groupNames = @(
@@ -93,11 +93,11 @@ Rename-Item -Path $newCsvPath -NewName "nbsenabled_$currentDate.csv"
 
 
 # Define the email parameters
-$emailFrom = "mailserver@nbs.at"
-$emailTo = "alexander.krenn@nextbeststep.at"
+$emailFrom = "from@sender.com"
+$emailTo = "to@recipient.com"
 $emailSubject = "NBS Benutzerliste - NBS $currentDate"
-$emailBody = "Hallo Alex, hier die Automatisierte Benutzerliste für das Pressehaus vom $currentDate. Bitte einpfelgen und um kurze Rückmeldung. Danke!"
-$smtpServer = "mailrelay.nbs.local"
+$emailBody = "Hallo Test, hier die Automatisierte Benutzerliste für das Pressehaus vom $currentDate. Bitte einpfelgen und um kurze Rückmeldung. Danke!"
+$smtpServer = "mailrelay.test.com"
 
 # Paths to the CSV files
 $newCsvPath = "$newDirPath\nbsenabled_$currentDate.csv"

@@ -2,7 +2,7 @@
 Import-Module ActiveDirectory
 
 # Directory for the files where they are saved at
-$newDirPath = "\\jumpsrv1\e$\O4B\OneDrive - NOEP\scripts\NOEP-Scripts-1\AD\NBS"
+$newDirPath = "\\share\share\NBS"
 
 # Groupnames where our licensed Users are a member of, you can also use Get-Aduser -Filer * to get all Users.
 $groupNames = @(

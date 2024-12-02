@@ -27,7 +27,7 @@ function Get-UserObject {
 
     $institution = switch -Regex ($user.Mail) {
         '@Company\.at$' { "Company" }
-        '@Comapany1\.at$' { "Company1" }
+        '@Company1\.at$' { "Company1" }
         '@nbs\.at$' {"NBS"}
         default { "Unknown" }
     }
